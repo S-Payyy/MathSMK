@@ -6,7 +6,7 @@ import os
 os.system('color 2')
 
 # Manifest
-nama = "Rekap Absensi Kelas"
+nama = "Tool XCL"
 versi = "1.7.0"
 versi_python = "3.10"
 
