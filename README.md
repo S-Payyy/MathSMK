@@ -1,2 +1,2 @@
-# Project Gabut 
-gabut mode on
+# Project Kalo lg ga ada kerjaan
+mwehehe 
