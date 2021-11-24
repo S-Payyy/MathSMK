@@ -134,6 +134,80 @@ def statistika():
 def ukuran_pemusatan_data_tunggal():
     pass
 
+def angka_baku():
+    print('''
+    Nilai matematika Rian 75 dengan rata-rata kelas 67 dan simpangan baku 8. Nilai Bahasa Inggris
+    Rian 80 dengan rata-rata kelas 70 dan simpangan baku 12. Bagaimana kedudukan Rian dalam
+    pelajaran Matematika? Apakah lebih baik dari Bahasa Inggris atau sebaliknya?
+    x = Nilai Rian ( ex 75 )
+    x_bar = rata rata (ex 67)
+    sd = simpangan baku ( ex 8 )\n
+    ''')
+    x = input('Masukkan Nilai data = ')
+    x_bar = input("Masukkan Nilai rata rata = ")
+    sd = input("Masukkan Nilai Simpangan baku = ")
+    #calculating
+
+    z = (float(x)-float(x_bar))/float(sd) 
+
+    print(f'Hasil = {round(z, 2)}')
+    print('\n')
+
+    back = input('Coba lagi [Y/N] ? ').upper()
+    if back == 'Y':
+        print('\n')
+        return angka_baku()
+    else:
+        menucal()
+
+def angka_baku2():
+    print('''
+    Dalam suatu kelas, nilai rata-rata ulangan matematika adalah 70. Bima mempunyai angka baku
+    1,5 sedangkan simpangan bakunya 4. Berapakah nilai ulangan Bima?
+    x_bar = rata rata (ex 70)
+    ab = Angka baku (ex 1.5)
+    sd = Simpangan baku (ex 4)\n
+    ''')
+    x_bar = input("Masukkan Nilai rata rata = ")
+    ab = input("Masukkan Nilai Angka baku = ")
+    sd = input("Masukkan Nilai Simpangan baku = ")
+
+    x = float(sd)*float(ab)+float(x_bar)
+
+    print(f'hasil = {round(x, 2)}')
+    print('\n')
+
+    back = input('Coba lagi [Y/N] ? ').upper()
+    if back == 'Y':
+        print('\n')
+        return angka_baku2()
+    else:
+        menucal()
+def koefisien():
+    #Koefisien 
+    print('''
+    Rata-rata nilai matematika adalah 8,25 dan simpangan baku 0,75. Hitunglah besar koefisien
+    variasinya ?
+    
+    x_bar = rata rata (ex 8.25)
+    sd = simpangan baku (ex 0.75)
+    \n''')
+    
+    x_bar = input("Masukkan Nilai rata rata(x_bar)= ")
+    sd = input("Masukkan Nilai Simpangan baku(sd)= ")
+    
+    kv = float(sd)/float(x_bar)*100
+
+    print(f'hasil = {round(kv, 2)}%')
+    print('\n')
+
+    back = input('Coba lagi [Y/N] ? ').upper()
+    if back == 'Y':
+        print('\n')
+        return koefisien()
+    else:
+        menucal()
+
 def menucal():
     import os
     import time
@@ -158,6 +232,9 @@ def menucal():
     print('12. Peluang kejadian saling bebas')
     print('13. Statistika')
     print('14. Ukuran pemusatan data tunggal')
+    print('15. Angka baku')
+    print('16. Angka baku(ex.2)')
+    print('17. Koefisien')
     print(120*"=")
     i = input("Code Program > ")
     print('\n')
@@ -229,6 +306,21 @@ def menucal():
 
     elif i=='14':
         ukuran_pemusatan_data_tunggal()
+        os.system('cls')
+        print('Code created by @xcl')
+
+    elif i=='15':
+        angka_baku()
+        os.system('cls')
+        print('Code created by @xcl')
+
+    elif i=='16':
+        angka_baku2()
+        os.system('cls')
+        print('Code created by @xcl')
+
+    elif i=='17':
+        koefisien()
         os.system('cls')
         print('Code created by @xcl')
 

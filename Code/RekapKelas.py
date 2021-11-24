@@ -25,10 +25,10 @@ def rekap():
 
 #output dari fungsi 1
   print(1*'\n')
-  print('= Daftar siswa yang tidak Absen = ')
+  print('= Daftar siswa yang tidak/terlambat Absen = ')
   print(1*'\n')
   for name in alpha:
-    print(f'>> {name}, Tidak hadir')
+    print(f'>> {name.capitalize()}, Tidak Absen')
 
   print('\n')
   print(f' Jumlah siswa kelas XII TKJ 1  > {jumlah_siswa}')

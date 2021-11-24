@@ -1,3 +1,7 @@
-txt = input("Nilai = ")
-x = txt.replace(' ', '*')
-print(eval(x))
+#Koefisien 
+sd = input("Masukkan Nilai Simpangan baku = ")
+x_bar = input("Masukkan Nilai rata rata = ")
+
+kv = float(sd)/float(x_bar)*100
+
+print(f'hasil = {round(kv, 4)}%')
