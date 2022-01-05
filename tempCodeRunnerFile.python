@@ -1,7 +1,10 @@
-#Koefisien 
-sd = input("Masukkan Nilai Simpangan baku = ")
-x_bar = input("Masukkan Nilai rata rata = ")
-
-kv = float(sd)/float(x_bar)*100
-
-print(f'hasil = {round(kv, 4)}%')
+import statistics
+ 
+# unsorted list of random integers
+data1 = [60,80,60,80,40,90,70,50]
+ 
+ 
+# Printing median of the
+# random data-set
+print("Median of data-set is : % s "
+        % (statistics.median(data1)))

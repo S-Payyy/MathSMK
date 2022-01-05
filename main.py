@@ -7,7 +7,7 @@ os.system('color 2')
 
 # Manifest
 nama = "Tool XCL"
-versi = "1.7.0"
+versi = "1.10.0"
 versi_python = "3.10"
 
 # startup program

@@ -1,5 +1,8 @@
 # tahap pengembangan ~
 
+import math
+
+
 def kaidah_pencacahan():
     txt = input("Nilai (ex : 1 2 3 4...) = ")
     x = txt.replace(' ', '*')
@@ -105,19 +108,263 @@ def permutasi_unsur_berbeda():
         menucal()
 
 def permutasi_unsur_sama():
-    pass
+    import math
+
+    print("1. Berapa banyak  cara menyusun huruf dari kata 'SELASA' ?\n2. Dalam suatu perpustakaan terdapat 3 buku bahasa indonesia, 2 buku ppkn, dan 3 buku b.inggris. Berapa banyak cara menyusun buku buku  tersebut?\n")
+    soal = input("Pilih contoh soal 1/2 : ")
+    print("\n")
+    if soal == '1':
+        kata = input("Masukkan Kata : ".lower())
+        total_huruf = len(kata)
+        a = kata.count('a')
+        b = kata.count('b')
+        c = kata.count('c')
+        d = kata.count('d')
+        e = kata.count('e')
+        f = kata.count('f')
+        g = kata.count('g')
+        h = kata.count('h')
+        i = kata.count('i')
+        j = kata.count('j')
+        k = kata.count('k')
+        l = kata.count('l')
+        m = kata.count('m')
+        n = kata.count('n')
+        o = kata.count('o')
+        p = kata.count('p')
+        q = kata.count('q')
+        r = kata.count('r')
+        s = kata.count('s')
+        t = kata.count('t')
+        u = kata.count('u')
+        v = kata.count('v')
+        w = kata.count('w')
+        x = kata.count('x')
+        y = kata.count('y')
+        z = kata.count('z')
+        if a < 1:
+            a = 1
+            b = 1
+            c = 1
+            d = 1
+            e = 1
+            f = 1
+            g = 1
+            h = 1
+            i = 1
+            j = 1
+            k = 1
+            l = 1
+            m = 1
+            n = 1
+            o = 1
+            p = 1
+            q = 1
+            r = 1
+            s = 1
+            t = 1
+            u = 1
+            v = 1
+            w = 1
+            x = 1
+            y = 1
+            z = 1
+
+        f_total_huruf = math.factorial(total_huruf)
+
+        f_huruf = math.factorial(a)*math.factorial(b)*math.factorial(c)*math.factorial(d)*math.factorial(e)*math.factorial(f)*math.factorial(g)*math.factorial(h)*math.factorial(i)*math.factorial(j)*math.factorial(k)*math.factorial(l)*math.factorial(m)*math.factorial(n)*math.factorial(o)*math.factorial(p)*math.factorial(q)*math.factorial(r)*math.factorial(s)*math.factorial(t)*math.factorial(u)*math.factorial(v)*math.factorial(w)*math.factorial(x)*math.factorial(y)*math.factorial(z)
+
+        P = f_total_huruf/f_huruf
+
+        print(f'Jawaban adalah : {P}')
+
+        back = input('\nCoba lagi [Y/N] ? ').upper()
+        if back == 'Y':
+            print('\n')
+            return permutasi_unsur_sama()
+        else:
+            menucal()
+
+    elif soal == '2':
+        print('Jika memasukkan hanya angka beri jarak antar angka dengan space ex : 1 2 3 4 dst...')
+        kata = input("Masukkan Soal/angka : ".lower())
+
+        f_angka = [int(s) for s in kata.split() if s.isdigit()]
+
+        qq = 0
+        fac = []
+        for i in f_angka:
+            qq = qq + i
+            ff = math.factorial(i)
+            fac.append(ff)
+
+        result = 1
+        for x in fac:
+            result = result * x
+
+        f_qq = math.factorial(qq)
+
+        P = f_qq/result
+
+        print(f'Jawaban adalah : {int(P)}')
+
+        back = input('\nCoba lagi [Y/N] ? ').upper()
+        if back == 'Y':
+            print('\n')
+            return permutasi_unsur_sama()
+        else:
+            menucal()
+
+    else :
+        print('\nPilihan salah!')
+        return permutasi_unsur_sama()
 
 def permutasi_siklis():
-    pass
+    import math
+    print('Contoh soal :\n1. Tidak ada yang berdampingan\n2. Ada yang Berdampingan')
+    soal = input('Pilih jenis soal : ')
+    print("\n")
+    if soal=='1':
+        orang = input("Banyaknya orang dalam soal = ")
+        ps = (int(orang)-1)
+        h = math.factorial(ps)
+        print(f'\nHasil = {h}')
+
+        back = input('\nCoba lagi [Y/N] ? ').upper()
+        if back == 'Y':
+            print('\n')
+            return permutasi_siklis()
+        else:
+            menucal()
+
+    elif soal=='2':
+        orang1 = input("Banyaknya orang yang tidak berdampingan = ")
+        orang2 = input("Banyaknya orang yang berdampingan = ")
+        r1 = (int(orang1)-1)
+        f1 = math.factorial(r1)
+        r2 = math.factorial(int(orang2))
+        h = f1*r2
+        
+        print(f'\nHasil = {h}')
+
+        back = input('\nCoba lagi [Y/N] ? ').upper()
+        if back == 'Y':
+            print('\n')
+            return permutasi_siklis()
+        else:
+            menucal()
+
+    else :
+        print('\nPilihan salah!')
+        return permutasi_siklis()
 
 def kombinasi():
-    pass
+    import math
+
+    n = input('Masukkan Nilai n : ')
+    r = input('Masukkan Nilai r : ')
+    
+    a1 = int(n) 
+    a2 = int(r)
+    a3 = int(n)-int(r)
+    f1 =math.factorial(a1)
+    f2 = math.factorial(a2)
+    f3 = math.factorial(a3)
+    r = f1/(f2*f3)
+    print(f'Hasil adalah : {r}')
+    
+    back = input('\nCoba lagi [Y/N] ? ').upper()
+    if back == 'Y':
+        print('\n')
+        return kombinasi()
+    else:
+        menucal()
 
 def ruang_sampel():
-    pass
+    logam = 0
+    dadu = 0
+
+    logam = input('Masukkan Banyak Logam (Masukkan nilai 0 jika tidak ada) : ')
+    dadu = input('Masukkan Banyak Dadu (Masukkan nilai 0 jika tidak ada) : ')
+
+    r = (2**int(logam))*(6**int(dadu))
+    if int(logam) <= 0 and int(dadu) <= 0 :
+        r = 0
+    print(f'Hasil adalah : {r}')
+    
+    back = input('\nCoba lagi [Y/N] ? ').upper()
+    if back == 'Y':
+        print('\n')
+        return ruang_sampel()
+    else:
+        menucal()
 
 def peluang_kejadian():
-    pass
+    import fractions as fr
+    print("Jenis Sampel : \n1. Logam(can't use)\n2. Dadu\n3. Kartu Bridge(can't use)\n")
+    soal = input('Masukkan No Soal : ')
+    if soal == '1':
+        peluang_kejadian()
+    #    def jenis_soal():
+    #        print('Jenis Peluang :\n1. Peluang muncul 1 angka\n2. Peluang muncul gambar\n')
+    #        jenis = input('Masukkan Jenis Peluang : ')
+    #        if jenis == '1':
+    #           pass
+    #        elif jenis == '2':
+    #            pass
+    #        elif jenis == '3':
+    #            pass
+    #        else:
+    #            print('\nPilihan salah!\n')
+    #            return jenis_soal()
+    #    jenis_soal()        
+
+    elif soal == '2':
+        def jenis_soal():
+            print('Jenis Peluang :\n1. Peluang muncul angka Ganjil\n2. Peluang muncul angka Genap\n3. Pelang muncul angka\n4. Bilangan Prima\n5. Bilangan non Prima')
+            jenis = input('Masukkan Jenis Peluang : ')
+            if jenis == '1':
+                aganjil = 3
+                ns = 6
+                n = input('\nBanyak dadu : ')
+                pa = aganjil/ns**int(n)
+                pecahan = fr.Fraction(pa)
+                print(f'Hasil adalah : {pa} atau {pecahan}')
+
+            elif jenis == '2':
+                agenap = 3
+                ns = 6
+                n = input('\nBanyak dadu : ')
+                pa = agenap/ns**int(n)
+                pecahan = fr.Fraction(pa)
+                print(f'Hasil adalah : {pa} atau {pecahan}')
+
+            elif jenis == '3':
+                from Code import padadu as pad
+                pad.peluang_dadu()
+                back = input('\nCoba lagi [Y/N] ? ').upper()
+                if back == 'Y':
+                    print('\n')
+                    return peluang_kejadian()
+                else:
+                    menucal()
+
+            elif jenis == '4':
+                pass
+
+            elif jenis == '5':
+                pass
+
+            else:
+                print('\nPilihan salah!\n')
+                return jenis_soal()
+        jenis_soal()        
+
+    elif soal == '3':
+        peluang_kejadian()
+    else :
+        print('\nPilihan salah!')
+        return peluang_kejadian()
 
 def frekuensi_harapan():
     pass
@@ -337,3 +584,5 @@ def menucal():
         os.system('cls')
         print('Code created by @xcl')
         return menucal()
+
+# Testing command #
